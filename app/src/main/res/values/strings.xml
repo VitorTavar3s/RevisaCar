@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RevisaCar</string>
+    <string name="text_logo">RevisaCar</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Cadastre-se</string>
+    <string name="pag_cadastro">Bem-vindo à RevisaCar !</string>
+    <string name="meu_veiculo">Meu Veículo</string>
+    <string name="incluir">Incluir Abastecimento</string>
+    <string name="visulizar">Visualizar Abastecimento</string>
+</resources>

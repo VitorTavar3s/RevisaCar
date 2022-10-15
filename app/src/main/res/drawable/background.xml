@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/plano_de_fundo"/>
+        <item>
+            <shape>
+                <solid android:color="#99C1C1C1"></solid>
+            </shape>
+        </item>
+
+
+
+</layer-list>

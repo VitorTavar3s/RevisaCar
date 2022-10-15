@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MeuVeiculo">
+
+    <TextView
+        android:id="@+id/meu_veiculo"
+        android:text="@string/meu_veiculo"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageButton
+        android:id="@+id/incluir"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/sinal_mais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meu_veiculo" />
+
+    <TextView
+        android:id="@+id/text_incluir"
+        style="@style/TextTelaPrincipal"
+        android:text="@string/incluir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incluir"
+        />
+
+    <ImageButton
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toEndOf="@+id/incluir"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/fatura"
+        />
+
+    <TextView
+        style="@style/TextTelaPrincipal"
+        android:text="@string/visulizar"
+        android:layout_marginLeft="200sp"
+        app:layout_constraintStart_toStartOf="@+id/text_incluir"
+        app:layout_constraintTop_toBottomOf="@+id/incluir" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
