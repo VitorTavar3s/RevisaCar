@@ -41,25 +41,41 @@
         />
 
     <ImageButton
-
+        android:id="@+id/visualizar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintStart_toEndOf="@+id/incluir"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
+        app:layout_constraintStart_toEndOf="@+id/incluir"
+        app:layout_constraintTop_toBottomOf="@id/meu_veiculo"
         android:background="@drawable/fatura"
         />
 
     <TextView
         style="@style/TextTelaPrincipal"
         android:text="@string/visulizar"
-        android:layout_marginLeft="200sp"
+        android:layout_marginLeft="200dp"
         app:layout_constraintStart_toStartOf="@+id/text_incluir"
-        app:layout_constraintTop_toBottomOf="@+id/incluir" />
+        app:layout_constraintTop_toBottomOf="@+id/visualizar" />
 
+    <ImageButton
+        android:id="@+id/revisao"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_incluir"
+        android:background="@drawable/automovel"
+        />
 
-
+    <TextView
+        style="@style/TextTelaPrincipal"
+        android:id="@+id/text_revisao"
+        android:text="@string/revisao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revisao"
+   />
 
 
 

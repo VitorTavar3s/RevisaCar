@@ -5,13 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Abastecer"
+    tools:context=".Abastecer">
+
+    <TextView
+        style="@style/TextTelaRevisao"
+        android:text="Digite a data do abastecimento:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+    />
+    
+    <EditText
+        style="@style/Edit_text_revisao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+    />
 
 
 
-
-
-
-    >
 
 </androidx.constraintlayout.widget.ConstraintLayout>

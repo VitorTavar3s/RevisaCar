@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "417842711698",
+    "project_id": "revisacar-88a98",
+    "storage_bucket": "revisacar-88a98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417842711698:android:c0c8a1f6ff0adcd2732a4b",
+        "android_client_info": {
+          "package_name": "com.example.revisacar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417842711698-3d4b3hjj8kcj68edsjg74v7h4fd5qkc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh1CAijY7D3Pu48dqc-LoThZfW8aCjpKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417842711698-3d4b3hjj8kcj68edsjg74v7h4fd5qkc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
