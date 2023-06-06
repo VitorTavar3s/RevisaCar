@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Abastecer extends AppCompatActivity {
+public class Revisao extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abastecer);
+        setContentView(R.layout.activity_revisao);
         getSupportActionBar().hide();
     }
 }

@@ -5,42 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Abastecer">
+    tools:context=".Revisao">
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite a data do abastecimento:"
+        android:text="Digite a data da revisão:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="70dp"
-    />
-    
+        android:layout_marginTop="50dp"
+        />
+
     <EditText
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
-    />
-
-    <TextView
-        style="@style/TextTelaRevisao"
-        android:text="Escolha o tipo do combustível:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="170dp"
-    />
-
-    <Spinner
-        style="@style/Edit_text_revisao"
-        android:id="@+id/spinner_combustivel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/spinner_comb"
-        android:layout_marginTop="200dp"
-     />
+        android:layout_marginTop="80dp"
+        />
 
     <TextView
         style="@style/TextTelaRevisao"
@@ -48,55 +29,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="150dp"
         />
 
     <EditText
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="180dp"
         />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite o valor pago por litro:"
+        android:text="Digite o valor da revisão:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="250dp"
         />
 
     <EditText
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="280dp"
         />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite o total gasto no combustível:"
+        android:text="Descreva os procedimentos\n realizados na revisão:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="350dp"
         />
 
     <EditText
-        style="@style/Edit_text_revisao"
+        style="@style/Edit_text_descricao"
+        android:layout_marginTop="402dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="500dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/Button_Abastecimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="600dp"
         android:text="Incluir"
-    />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

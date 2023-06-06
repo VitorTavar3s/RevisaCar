@@ -23,7 +23,7 @@
         />
 
     <ImageButton
-        android:id="@+id/incluir"
+        android:id="@+id/abastecimento"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="60dp"
@@ -33,30 +33,31 @@
         app:layout_constraintTop_toBottomOf="@+id/meu_veiculo" />
 
     <TextView
-        android:id="@+id/text_incluir"
+        android:id="@+id/text_abastecimento"
         style="@style/TextTelaPrincipal"
         android:text="@string/incluir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/incluir"
+        app:layout_constraintTop_toBottomOf="@+id/abastecimento"
         />
 
     <ImageButton
-        android:id="@+id/visualizar"
+        android:id="@+id/visualizar_abastecimento"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        app:layout_constraintStart_toEndOf="@+id/incluir"
+        app:layout_constraintStart_toEndOf="@+id/abastecimento"
         app:layout_constraintTop_toBottomOf="@id/meu_veiculo"
         android:background="@drawable/fatura"
         />
 
     <TextView
+        android:id="@+id/text_visualizar_abastecimento"
         style="@style/TextTelaPrincipal"
         android:text="@string/visulizar"
         android:layout_marginLeft="200dp"
-        app:layout_constraintStart_toStartOf="@+id/text_incluir"
-        app:layout_constraintTop_toBottomOf="@+id/visualizar" />
+        app:layout_constraintStart_toStartOf="@+id/text_abastecimento"
+        app:layout_constraintTop_toBottomOf="@+id/abastecimento" />
 
     <ImageButton
         android:id="@+id/revisao"
@@ -65,7 +66,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_incluir"
+        app:layout_constraintTop_toBottomOf="@id/text_abastecimento"
         android:background="@drawable/automovel"
         />
 
@@ -77,6 +78,24 @@
         app:layout_constraintTop_toBottomOf="@+id/revisao"
    />
 
+    <ImageButton
+        android:id="@+id/visualizar_revisao"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintStart_toEndOf="@id/revisao"
+        app:layout_constraintTop_toBottomOf="@id/text_visualizar_abastecimento"
+        android:background="@drawable/revisao"
+        />
+
+    <TextView
+        android:id="@+id/text_visualizar_revisao"
+        style="@style/TextTelaPrincipal"
+        android:text="Visualizar Revisões"
+        android:layout_marginLeft="200dp"
+        app:layout_constraintStart_toStartOf="@+id/text_revisao"
+        app:layout_constraintTop_toBottomOf="@+id/visualizar_revisao" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

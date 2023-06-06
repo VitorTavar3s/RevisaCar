@@ -34,13 +34,26 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text_revisao</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">15dp</item>
         <item name="android:maxLength">40</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
     </style>
 
+    <style name="Edit_text_descricao">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text_revisao</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:padding">60dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:maxLines">7</item>
+    </style>
     <style name="Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -90,6 +103,20 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Button_Abastecimento">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_abastecimento</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
 </resources>

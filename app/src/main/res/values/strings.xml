@@ -8,4 +8,9 @@
     <string name="incluir">Incluir Abastecimento</string>
     <string name="visulizar">Visualizar Abastecimento</string>
     <string name="revisao">Incluir Revisão</string>
+    <string-array name="spinner_comb">
+        <item>Gasolina</item>
+        <item>Etanol</item>
+        <item>Diesel</item>
+    </string-array>
 </resources>
