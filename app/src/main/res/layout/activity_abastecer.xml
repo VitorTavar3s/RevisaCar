@@ -9,94 +9,89 @@
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite a data do abastecimento:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="70dp"
-    />
-    
+        android:text="Digite a data do abastecimento:"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
+        android:inputType="date"
+        android:id="@+id/data_abastecimento"
         style="@style/Edit_text_revisao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
-    />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Escolha o tipo do combustível:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="170dp"
-    />
+        android:text="Escolha o tipo do combustível:"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        style="@style/Edit_text_revisao"
         android:id="@+id/spinner_combustivel"
+        style="@style/Edit_text_revisao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/spinner_comb"
         android:layout_marginTop="200dp"
-     />
+        android:entries="@array/spinner_comb"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite a quilometragem do veículo:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="270dp"
-        />
+        android:text="Digite a quilometragem do veículo:"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/km_veiculo"
         style="@style/Edit_text_revisao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="300dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite o valor pago por litro:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="370dp"
-        />
+        android:text="Digite o valor pago por litro:"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/valor_litro"
         style="@style/Edit_text_revisao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="400dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite o total gasto no combustível:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="470dp"
-        />
+        android:text="Digite o total gasto no combustível:"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/valor_total"
         style="@style/Edit_text_revisao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="500dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_incluir"
         style="@style/Button_Abastecimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="600dp"
         android:text="Incluir"
-    />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

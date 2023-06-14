@@ -14,15 +14,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FormCadastro extends AppCompatActivity {
 
@@ -45,6 +50,8 @@ public class FormCadastro extends AppCompatActivity {
         senha_cadastro = findViewById(R.id.text_senha_cadastro);
         confsenha_cadastro = findViewById(R.id.text_confsenha_cadastro);
         btn_cadastrar = findViewById(R.id.btn_cadastro);
+        Map<String,Object> usuario = new HashMap<>();
+
 
 
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +92,24 @@ public class FormCadastro extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(FormCadastro.this, "Conta Criada com Sucesso.",
                                                 Toast.LENGTH_SHORT).show();
+                                        usuario.put("Nome",nome);
+                                        usuario.put("Email",email);
+                                        database.collection("usuários")
+                                                .add(usuario)
+                                                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                                    @Override
+                                                    public void onSuccess(DocumentReference documentReference) {
+                                                        Toast.makeText(FormCadastro.this,"Adicionado ao banco de dados",
+                                                                Toast.LENGTH_SHORT).show();
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Toast.makeText(FormCadastro.this,"Banco de dados Falhou",
+                                                                Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
 
                                     } else {
                                         Toast.makeText(FormCadastro.this, "Autenticação Falhou.",
@@ -102,6 +127,7 @@ public class FormCadastro extends AppCompatActivity {
 
 
     }
+
 
 
 }

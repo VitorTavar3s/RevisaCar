@@ -10,6 +10,7 @@
     <TextView
         style="@style/TextTelaRevisao"
         android:text="Digite a data da revisão:"
+        android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,6 +18,7 @@
         />
 
     <EditText
+        android:id="@+id/data_revisao"
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,6 +35,7 @@
         />
 
     <EditText
+        android:id="@+id/km_veiculo"
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,6 +52,7 @@
         />
 
     <EditText
+        android:id="@+id/valor_revisao"
         style="@style/Edit_text_revisao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,6 +69,7 @@
         />
 
     <EditText
+        android:id="@+id/descricao_revisao"
         style="@style/Edit_text_descricao"
         android:layout_marginTop="402dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_revisao"
         style="@style/Button_Abastecimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
