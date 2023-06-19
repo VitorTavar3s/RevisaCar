@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/id_abastecimento"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+         />
+
+    <TextView
+        android:id="@+id/km_veiculo"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+         />
+
+    <TextView
+        android:id="@+id/tipo_combustivel"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_abastecimento"
+        android:layout_alignParentLeft="true"
+         />
+
+    <TextView
+        android:id="@+id/data_abastecimento"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/km_veiculo"
+         />
+
+    <TextView
+        android:id="@+id/valor_litro"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipo_combustivel"
+        android:layout_alignParentLeft="true"
+         />
+
+    <TextView
+        android:id="@+id/valor_total"
+        style="@style/TextItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/data_abastecimento"
+         />
+
+</RelativeLayout>
