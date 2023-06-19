@@ -17,7 +17,7 @@
             android:name=".VisualRevisao"
             android:exported="false" />
         <activity
-            android:name=".VisualAbastecer"
+            android:name=".FormLogin"
             android:exported="false" />
         <activity
             android:name=".Revisao"
@@ -35,7 +35,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".FormLogin"
+            android:name=".VisualAbastecer"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

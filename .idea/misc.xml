@@ -13,7 +13,7 @@
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/drawable/edit_text_revisao.xml" value="0.2415" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2595" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/font/proxima_nova.xml" value="0.2833333333333333" />
-        <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_abastecer.xml" value="0.2" />
+        <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_abastecer.xml" value="0.264" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_form_cadastro.xml" value="0.25" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_form_login.xml" value="0.25" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -21,6 +21,8 @@
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_revisao.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_visual_abastecer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/activity_visual_revisao.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/item_abastecer.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/layout/item_list_abastecer.xml" value="0.264" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.109" />
         <entry key="..\:/Users/vitor/AndroidStudioProjects/RevisaCar/app/src/main/res/mipmap-anydpi-v26/ic_sinal_mais.xml" value="0.2395" />
       </map>

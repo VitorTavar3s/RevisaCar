@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Abastecimentos"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,16 +22,28 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="80dp"
         />
+
     <ImageView
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:src="@drawable/ic_fechar"
         app:layout_constraintStart_toEndOf="@+id/text_abastecer"
         android:layout_marginLeft="17dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="28dp"
-
         />
+
+    <ListView
+        android:id="@+id/list_abastecer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_abastecer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
