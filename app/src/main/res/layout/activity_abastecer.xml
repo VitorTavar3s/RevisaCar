@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="Digite a data do abastecimento:"
+        android:text="Escolha a data do abastecimento:"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -21,7 +21,11 @@
         style="@style/Edit_text_revisao"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableEnd="@drawable/calendar"
+        android:focusable="false"
+        android:clickable="true"
+        />
 
     <TextView
         style="@style/TextTelaRevisao"
@@ -51,6 +55,7 @@
     <EditText
         android:id="@+id/km_veiculo"
         style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
         android:layout_marginTop="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,6 +71,7 @@
     <EditText
         android:id="@+id/valor_litro"
         style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
         android:layout_marginTop="400dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -81,6 +87,7 @@
     <EditText
         android:id="@+id/valor_total"
         style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
         android:layout_marginTop="500dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

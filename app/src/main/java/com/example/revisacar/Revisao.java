@@ -8,11 +8,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.github.rtoshiro.util.format.MaskFormatter;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.pattern.MaskPattern;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.revisacar.controller.ObterData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +45,13 @@ public class Revisao extends AppCompatActivity {
         MaskTextWatcher mtw = new MaskTextWatcher(edit_data_revisao,smf);
         edit_data_revisao.addTextChangedListener(mtw);
 
+        edit_data_revisao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObterData obterData = new ObterData(edit_data_revisao);
+                obterData.show(getSupportFragmentManager(),"seletor_data");
+            }
+        });
 
         btn_revisao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +67,8 @@ public class Revisao extends AppCompatActivity {
                 revisao.put("km_veiculo",km_veiculo);
                 revisao.put("valor_revisao",valor_revisao);
                 revisao.put("descricao_revisao",descricao_revisao);
+                revisao.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
+                revisao.put("timestamp", FieldValue.serverTimestamp());
 
                 database.collection("Revisão")
                         .add(revisao)

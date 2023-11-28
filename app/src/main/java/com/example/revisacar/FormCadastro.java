@@ -94,7 +94,8 @@ public class FormCadastro extends AppCompatActivity {
                                                 Toast.LENGTH_SHORT).show();
                                         usuario.put("Nome",nome);
                                         usuario.put("Email",email);
-                                        database.collection("usuários")
+                                        usuario.put("userId",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                        database.collection("Usuários")
                                                 .add(usuario)
                                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                                     @Override

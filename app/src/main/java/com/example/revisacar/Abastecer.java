@@ -1,10 +1,18 @@
 package com.example.revisacar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AlertDialogLayout;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -12,9 +20,13 @@ import android.widget.Toast;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.revisacar.controller.ObterData;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,14 +52,23 @@ public class Abastecer extends AppCompatActivity {
         btn_incluir = findViewById(R.id.btn_incluir);
         database = FirebaseFirestore.getInstance();
 
-        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
-        MaskTextWatcher mtw = new MaskTextWatcher(edit_data_abastecimento,smf);
-        edit_data_abastecimento.addTextChangedListener(mtw);
 
         SimpleMaskFormatter smf2 = new SimpleMaskFormatter("N,NN");
         MaskTextWatcher mtw2 = new MaskTextWatcher(edit_valor_litro,smf2);
         edit_valor_litro.addTextChangedListener(mtw2);
 
+        /*DecimalFormat df = new DecimalFormat("#.00");
+        String numeroFormatado = df.format(edit_valor_total);
+        edit_valor_total.setText(numeroFormatado);*/
+
+        edit_data_abastecimento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObterData obterData = new ObterData(edit_data_abastecimento);
+                obterData.show(getSupportFragmentManager(),"seletor_data");
+
+            }
+        });
 
 
         btn_incluir.setOnClickListener(new View.OnClickListener() {
@@ -66,13 +87,15 @@ public class Abastecer extends AppCompatActivity {
                 abastecer.put("valor_litro",valor_litro);
                 abastecer.put("valor_total",valor_total);
                 abastecer.put("tipo_combustivel",tipo_combustivel);
+                abastecer.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
+                abastecer.put("timestamp", FieldValue.serverTimestamp());
 
                 database.collection("Abastecimento")
                         .add(abastecer)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
-                                Toast.makeText(Abastecer.this, "Dados Incluídos com Sucesso",
+                                Toast.makeText(Abastecer.this, "Dados Incluídos com Sucesso!",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -82,9 +105,9 @@ public class Abastecer extends AppCompatActivity {
         });
 
 
-
-
-
-
     }
+
+
+
+
 }

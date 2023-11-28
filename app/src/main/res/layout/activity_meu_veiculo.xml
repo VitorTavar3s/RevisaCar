@@ -27,7 +27,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/sinal_mais"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/meu_veiculo" />
@@ -44,7 +44,7 @@
         android:id="@+id/visualizar_abastecimento"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="100dp"
         app:layout_constraintStart_toEndOf="@+id/abastecimento"
         app:layout_constraintTop_toBottomOf="@id/meu_veiculo"
@@ -63,7 +63,7 @@
         android:id="@+id/revisao"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_abastecimento"
@@ -82,7 +82,7 @@
         android:id="@+id/visualizar_revisao"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="100dp"
         app:layout_constraintStart_toEndOf="@id/revisao"
         app:layout_constraintTop_toBottomOf="@id/text_visualizar_abastecimento"
@@ -96,6 +96,25 @@
         android:layout_marginLeft="200dp"
         app:layout_constraintStart_toStartOf="@+id/text_revisao"
         app:layout_constraintTop_toBottomOf="@+id/visualizar_revisao" />
+
+    <ImageButton
+        android:id="@+id/grafico"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_revisao"
+        android:background="@drawable/grafico"
+        />
+
+    <TextView
+        android:id="@+id/text_grafico"
+        style="@style/TextTelaPrincipal"
+        android:text="Visualizar Gráfico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grafico"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

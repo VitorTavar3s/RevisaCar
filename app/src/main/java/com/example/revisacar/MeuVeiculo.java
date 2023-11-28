@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class MeuVeiculo extends AppCompatActivity {
 
-    private ImageButton abastecimento,visualizar_abastecimento,revisao,visualizar_revisao;
-    private TextView text_abastecimento,text_visualizar_abastecimento,text_revisao,text_visualizar_revisao;
+    private ImageButton abastecimento,visualizar_abastecimento,revisao,visualizar_revisao,grafico;
+    private TextView text_abastecimento,text_visualizar_abastecimento,text_revisao,text_visualizar_revisao,text_grafico;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,9 @@ public class MeuVeiculo extends AppCompatActivity {
         text_revisao = findViewById(R.id.text_revisao);
         visualizar_revisao = findViewById(R.id.visualizar_revisao);
         text_visualizar_revisao = findViewById(R.id.text_visualizar_revisao);
+        grafico = findViewById(R.id.grafico);
+        text_grafico = findViewById(R.id.text_grafico);
+
 
 
         abastecimento.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +76,38 @@ public class MeuVeiculo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MeuVeiculo.this,Revisao.class);
+                startActivity(intent);
+            }
+        });
+
+        visualizar_revisao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeuVeiculo.this,VisualRevisao.class);
+                startActivity(intent);
+            }
+        });
+
+        text_visualizar_revisao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeuVeiculo.this,VisualRevisao.class);
+                startActivity(intent);
+            }
+        });
+
+        grafico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeuVeiculo.this,VisualGasto.class);
+                startActivity(intent);
+            }
+        });
+
+        text_grafico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeuVeiculo.this,VisualGasto.class);
                 startActivity(intent);
             }
         });

@@ -14,7 +14,16 @@
         android:theme="@style/Theme.RevisaCar"
         tools:targetApi="31">
         <activity
-            android:name=".FormLogin"
+            android:name=".EditarItem"
+            android:exported="false" />
+        <activity
+            android:name=".Alterar_item"
+            android:exported="false" />
+        <activity
+            android:name=".VisualGasto"
+            android:exported="false" />
+        <activity
+            android:name=".VisualRevisao"
             android:exported="false" />
         <activity
             android:name=".VisualAbastecer"
@@ -26,7 +35,7 @@
             android:name=".Abastecer"
             android:exported="false" />
         <activity
-            android:name=".MeuVeiculo"
+            android:name=".FormLogin"
             android:exported="false" />
         <activity
             android:name=".FormCadastro"
@@ -35,7 +44,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".VisualRevisao"
+            android:name=".MeuVeiculo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

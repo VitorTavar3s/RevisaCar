@@ -9,8 +9,7 @@
 
     <TextView
         style="@style/TextTelaRevisao"
-        android:text="Digite a data da revisão:"
-        android:inputType="date"
+        android:text="Escolha a data da revisão:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,9 +19,13 @@
     <EditText
         android:id="@+id/data_revisao"
         style="@style/Edit_text_revisao"
+        android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="80dp"
+        android:drawableEnd="@drawable/calendar"
+        android:focusable="false"
+        android:clickable="true"
         />
 
     <TextView
@@ -37,6 +40,7 @@
     <EditText
         android:id="@+id/km_veiculo"
         style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="180dp"
@@ -54,6 +58,7 @@
     <EditText
         android:id="@+id/valor_revisao"
         style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="280dp"

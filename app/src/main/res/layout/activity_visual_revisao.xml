@@ -24,6 +24,7 @@
         />
 
     <ImageView
+        android:id="@+id/fechar"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:src="@drawable/ic_fechar"

@@ -39,6 +39,7 @@ public class AdapterPersonalizadoRev extends ArrayAdapter<String[]> {
             TextView km_veiculo = view.findViewById(R.id.km_veiculo);
             TextView data = view.findViewById(R.id.data_revisao);
             TextView descricao = view.findViewById(R.id.descricao);
+            TextView valor_revisao = view.findViewById(R.id.valor_revisao);
 
 
 
@@ -47,6 +48,7 @@ public class AdapterPersonalizadoRev extends ArrayAdapter<String[]> {
             km_veiculo.setText(item[1]+" Km");
             data.setText(item[2]);
             descricao.setText("Descrição:\n"+item[3]);
+            valor_revisao.setText("Valor: R$"+item[4]);
 
 
             int cor1 = ContextCompat.getColor(getContext(),R.color.cor1);
