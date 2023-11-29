@@ -124,7 +124,6 @@ public class VisualAbastecer extends AppCompatActivity {
             builder.setTitle("Excluir");
             builder.setIcon(R.drawable.ic_delete);
             builder.setMessage("Deseja mesmo excluir o registro?");
-            //builder.setIcon(R.drawable.)
             builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {

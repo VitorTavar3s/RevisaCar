@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -113,9 +114,14 @@ public class FormCadastro extends AppCompatActivity {
                                                 });
 
                                     } else {
-                                        Toast.makeText(FormCadastro.this, "Autenticação Falhou.",
-                                                Toast.LENGTH_SHORT).show();
-
+                                        Exception exception = task.getException();
+                                        if (exception instanceof FirebaseAuthUserCollisionException){
+                                            Toast.makeText(FormCadastro.this, "O email já está cadastrado. Por favor, use outro email.",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }else {
+                                            Toast.makeText(FormCadastro.this, "Autenticação Falhou.",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 }
                             });

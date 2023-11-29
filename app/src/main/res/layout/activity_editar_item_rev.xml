@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EditarItemRev">
+
+    <TextView
+        style="@style/TextTelaRevisao"
+        android:text="Escolha a data da revisão:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/data_revisao"
+        style="@style/Edit_text_revisao"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:drawableEnd="@drawable/calendar"
+        android:focusable="false"
+        android:clickable="true"
+        />
+
+    <TextView
+        style="@style/TextTelaRevisao"
+        android:text="Digite a quilometragem do veículo:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/km_veiculo"
+        style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        />
+
+    <TextView
+        style="@style/TextTelaRevisao"
+        android:text="Digite o valor da revisão:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="250dp"
+        />
+
+    <EditText
+        android:id="@+id/valor_revisao"
+        style="@style/Edit_text_revisao"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="280dp"
+        />
+
+    <TextView
+        style="@style/TextTelaRevisao"
+        android:text="Descreva os procedimentos\n realizados na revisão:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="350dp"
+        />
+
+    <EditText
+        android:id="@+id/descricao_revisao"
+        style="@style/Edit_text_descricao"
+        android:layout_marginTop="402dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_alterar_rev"
+        style="@style/Button_Abastecimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="600dp"
+        android:text="Alterar"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

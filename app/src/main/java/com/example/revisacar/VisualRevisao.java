@@ -1,8 +1,10 @@
 package com.example.revisacar;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -100,6 +102,9 @@ public class VisualRevisao extends AppCompatActivity {
         if (v.getId() == R.id.list_revisao){
             menu.add("Excluir");
         }
+        if (v.getId() == R.id.list_revisao){
+            menu.add("Alterar");
+        }
     }
 
     @Override
@@ -107,30 +112,66 @@ public class VisualRevisao extends AppCompatActivity {
         if (item.getTitle().equals("Excluir")){
             AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
             int position = info.position;
-
             String idItem = itemList.get(position)[5];
-            database.collection("Revisão")
-                    .document(idItem)
-                    .delete()
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(VisualRevisao.this, "Excluído com sucesso", Toast.LENGTH_SHORT).show();
-                            itemList.remove(position);
-                            adapter.notifyDataSetChanged();
-                            carregarDB();
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(VisualRevisao.this, "Erro ao excluir o item: " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
-                        }
-                    });
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Excluir");
+            builder.setIcon(R.drawable.ic_delete);
+            builder.setMessage("Deseja mesmo excluir o registro?");
+            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    database.collection("Revisão")
+                            .document(idItem)
+                            .delete()
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(VisualRevisao.this, "Excluído com sucesso", Toast.LENGTH_SHORT).show();
+                                    itemList.remove(position);
+                                    adapter.notifyDataSetChanged();
+                                    carregarDB();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(VisualRevisao.this, "Erro ao excluir o item: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+                }
+            });
+            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            builder.show();
 
             return true;
         }
+
+        if(item.getTitle().equals("Alterar")){
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            int position = info.position;
+
+
+
+            Intent intent = new Intent(this,EditarItemRev.class);
+            intent.putExtra("idItem",itemList.get(position)[5]);
+            intent.putExtra("km_veiculo",itemList.get(position)[1]);
+            intent.putExtra("data",itemList.get(position)[2]);
+            intent.putExtra("descricao",itemList.get(position)[3]);
+            intent.putExtra("valor_revisao",itemList.get(position)[4]);
+            startActivity(intent);
+
+        }
+
+
+
+
         return super.onContextItemSelected(item);
     }
 }
