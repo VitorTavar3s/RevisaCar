@@ -101,8 +101,8 @@ public class FormCadastro extends AppCompatActivity {
                                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                                     @Override
                                                     public void onSuccess(DocumentReference documentReference) {
-                                                        Toast.makeText(FormCadastro.this,"Adicionado ao banco de dados",
-                                                                Toast.LENGTH_SHORT).show();
+                                                        Intent intent = new Intent(FormCadastro.this,FormLogin.class);
+                                                        startActivity(intent);
                                                     }
                                                 })
                                                 .addOnFailureListener(new OnFailureListener() {

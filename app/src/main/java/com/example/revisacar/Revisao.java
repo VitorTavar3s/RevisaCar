@@ -3,6 +3,7 @@ package com.example.revisacar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -77,6 +78,8 @@ public class Revisao extends AppCompatActivity {
                             public void onSuccess(DocumentReference documentReference) {
                                 Toast.makeText(Revisao.this,"Dados Incluídos com Sucesso",
                                         Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Revisao.this,MeuVeiculo.class);
+                                startActivity(intent);
                             }
                         });
 

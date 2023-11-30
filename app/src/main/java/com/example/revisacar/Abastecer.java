@@ -10,6 +10,7 @@ import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -97,6 +98,8 @@ public class Abastecer extends AppCompatActivity {
                             public void onSuccess(DocumentReference documentReference) {
                                 Toast.makeText(Abastecer.this, "Dados Incluídos com Sucesso!",
                                         Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Abastecer.this,MeuVeiculo.class);
+                                startActivity(intent);
                             }
                         });
 
